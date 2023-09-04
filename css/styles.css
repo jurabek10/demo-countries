@@ -3,6 +3,7 @@
     --text-color: #111517;
     --body-bg-color: #fafafa;
     --element-bg-color: #fff;
+    --transition-duration: 0.4s;
 }
 
 
@@ -31,8 +32,8 @@ body {
     font-family: "Nunito Sans", "Arial", sans-serif;
     background-color: var(--body-bg-color);
     color: var(--text-color);
-    transition: background-color 0.4s ease,
-        color 0.4s ease;
+    transition: background-color var(--transition-duration) ease,
+        color var(--transition-duration) ease;
 }
 
 img {
@@ -309,10 +310,12 @@ main {
 .country-page-dls-wrapper {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 65px;
 }
 
 .country-page-details {
     width: 250px;
+    margin: 0;
 }
 
 .country-page-details-item {
@@ -320,12 +323,68 @@ main {
 }
 
 .country-page-details-item:not(:last-child) {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .country-page-details-title {
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
-    line-height: 32px; /* 200% */
+    line-height: 24px;
 }
+
+.country-page-details-value {
+    margin-left: 4px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.country-page-border-countries {
+    display: flex;
+    align-items: center;
+}
+
+.country-page-border-countries-heading {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 15px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 150% */
+}
+
+.country-page-border-countries-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.country-page-border-countries-link {
+    min-width: 96px;
+    padding: 5px 10px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    background-color: var(--element-bg-color);
+    color: var(--text-color);
+    text-align: center;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.10);
+    border-radius: 2px;
+    transition: background-color var(--transition-duration) ease
+        color var(--transition-duration) ease;
+}
+
+.country-page-border-countries-link:hover {
+    opacity: 0.8;
+}
+
+.country-page-border-countries-link:active {
+    opacity: 0.6;
+}
+
+.country-page-border-countries-link:not(:last-child) {
+    margin-right: 10px;
+}
+
+
