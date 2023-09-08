@@ -146,6 +146,17 @@ main {
     margin-bottom: 48px;
 }
 
+.filters-search-wrapper {
+    position: relative;
+}
+
+.filter-search-icon {
+    position: absolute;
+    top: 19px;
+    left: 32px;
+    pointer-events: none;
+}
+
 .filters-search-input {
     min-width: 480px;
     padding: 18px 74px;
